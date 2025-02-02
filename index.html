@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Budget Tracker</h1>
+    </header>
+    
+    <section>
+        <h2>Introduction</h2>
+        <p>Welcome to the Personal Budget Tracker! Use this tool to manage your monthly income and expenses effectively.</p>
+    </section>
+    
+    <section>
+        <h2>Add Income/Expense</h2>
+        <form id="budgetForm">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required><br><br>
+            
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Bills">Bills</option>
+            </select><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" required><br><br>
+            
+            <label>Type:</label>
+            <input type="radio" name="type" value="Income" required> Income
+            <input type="radio" name="type" value="Expense" required> Expense<br><br>
+            
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Budget Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="summaryBody">
+                <!-- Entries will be added here dynamically -->
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <p>Personal Budget Tracker &copy; 2025 | Version 1.0</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
